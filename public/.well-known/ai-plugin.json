@@ -5,6 +5,11 @@
     "description": "API for wallet analysis and interaction with various endpoints.",
     "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "https://wallet-analyzer-bitte.vercel.app"
+    }
+  ],
   "x-mb": {
     "account-id": "computation-nebula.near",
     "assistant": {
