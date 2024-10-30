@@ -8,7 +8,7 @@ export async function GET(request: Request) {
     if (!txhash) {
       return NextResponse.json({ error: `txhash not found` }, { status: 400 });
     }
-    const apiUrl = `https://api.nearblocks.io/v1/txn/${txhash}`
+    const apiUrl = `https://api.nearblocks.io/v1/txns/${txhash}`
 
     const response = await fetch(apiUrl, {
       method: "GET",
@@ -17,6 +17,7 @@ export async function GET(request: Request) {
         "Authorization": `Bearer ${process.env.NEARBLOCKS_API_KEY}`
       }
     });
+    console.log('response', response)
     if (!response.ok) {
       return NextResponse.json({ error: `HTTP error! Status: ${response.status}` }, { status: 400 });
     }

@@ -138,12 +138,12 @@ export async function GET() {
           "parameters": [
             {
               "in": "query",
-              "name": "contract",
+              "name": "token",
               "required": true,
               "schema": {
                 "type": "string"
               },
-              "description": "The contract identifier of the token."
+              "description": "The token name, symbol, or identifier to search for."
             }
           ],
           "responses": {
@@ -227,11 +227,11 @@ export async function GET() {
           }
         }
       },
-      "/api/tools/getTxn": {
+      "/api/tools/get-txn": {
         "get": {
           "summary": "Get Transaction Details",
           "description": "Fetch details of a specific transaction by its hash.",
-          operationId: "gettxn",
+          operationId: "get-txn",
           "parameters": [
             {
               "in": "query",
