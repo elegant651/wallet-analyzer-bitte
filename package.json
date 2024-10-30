@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev-test": "next dev",
     "dev": "concurrently \"next dev\" \"make-agent dev --port 3000\"",
-    "build": "next build && make-agent deploy",
+    "build": "next build && make-agent deploy -u https://wallet-analyzer-bitte.vercel.app",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@elysiajs/swagger": "^1.0.5",
     "elysia": "^1.0.16",
-    "next": "14.2.3",
+    "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -22,7 +23,7 @@
     "concurrently": "^9.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
-    "make-agent": "^0.0.21",
+    "make-agent": "0.0.22",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

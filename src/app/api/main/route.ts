@@ -2,7 +2,7 @@ import { Pair } from "@/app/types";
 import { swagger } from "@elysiajs/swagger";
 import { Elysia } from "elysia";
 
-const app = new Elysia({ prefix: "/api", aot: false })
+const app = new Elysia({ prefix: "/main", aot: false })
   .use(swagger({
     documentation: {
       info: {
