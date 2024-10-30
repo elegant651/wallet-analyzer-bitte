@@ -17,11 +17,11 @@ export async function GET() {
     },
     servers: [
       {
-        url: "https://wallet-analyzer-bitte.vercel.app",
+        url: config.url,
       },
     ],
     "x-mb": {
-      "account-id": "pascal_zephyr.near",
+      "account-id": key.accountId,
       assistant: {
         "name": "Wallet Analyzer API",
         "description": "API for wallet analysis and interaction with various endpoints.",
