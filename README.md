@@ -1,25 +1,35 @@
 # Wallet Analyzer Agent
 
-## Project Walkthrough
-
-
 #### API Base URL
 
-https://ref-finance-agent.vercel.app
+https://wallet-analyzer-bitte.vercel.app
+
 
 #### Endpoints
 
-- Token Metadata `GET` `/api/token/{token}`
+- Search tokens `GET` `/api/tools/search`
 
-- Swap Transactions `GET` `/api/swap/{tokenIn}/{tokenOut}/{quantity}`
+- Get Top tokens `GET` `/api/tools/toptoken`
+
+- Get Top holders `GET` `/api/tools/topholders`
+
+- Get tx info `GET` `/api/tools/get-txn`
+
+- Get account activity `GET` `/api/tools/activity`
+
 
 #### Usage
-Make LLM requests to the endpoints above. Refer to the full API documentation for detailed parameter and response information.
+
+- toptoken : what's top trending tokens?
+- search : give me the info about sweat
+- topholders : analyze top holders for sweat
+- activity: analyze account activity for hodl-lockup.sweat
+- get-txn : give me txinfo about 3CT2mXeRDREv78qYoGvZoJGUB8iGU6rPKu5tctc9CsMf
 
 
 ### Installation
 
-Set `NEAR_ENV="mainnet"` in your `.env.local` file.
+Set `NEAR_ENV="mainnet"` and `NEARBLOCKS_API_KEY` in your `.env.local` file.
 
 ```bash
 # install dependencies

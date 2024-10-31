@@ -12,11 +12,11 @@ export default function Home() {
             OpenAPI Spec
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/api/swagger">
             Swagger
           </Link>
-        </li>
+        </li> */}
       </ul>
     </main>
   );
